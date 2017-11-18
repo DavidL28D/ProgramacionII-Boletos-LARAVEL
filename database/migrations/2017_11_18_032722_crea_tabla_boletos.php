@@ -15,7 +15,7 @@ class CreaTablaBoletos extends Migration
     {
         Schema::create('boletos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("Serial")->unsigned();
+            $table->integer("Serial")->unsigned()->unique();
             $table->String("Nombre", 100);
             $table->date("Fecha");  
             $table->integer("Ubicacion")->unsigned();
