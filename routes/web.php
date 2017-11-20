@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/registro','UsuarioController');
+
+Route::get('plantillademo',function(){
+    return view('demo');
+});
+
+Route::get('user/{usuario}', 'UsuarioController@show');
