@@ -15,15 +15,15 @@ class CreaTablaClientes extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('id');
-            $table->String("Nombres", 50);
-            $table->String("Apellidos", 50);
+            $table->String("Nombres");
+            $table->String("Apellidos");
             $table->integer("Cedula")->unsigned();
-            $table->String("Direccion", 100);
+            $table->String("Direccion");
             $table->integer("Sexo")->unsigned();
             $table->integer("Telefono")->unsigned();
-            $table->String("Correo", 50)->unique();
-            $table->String("Usuario", 50)->unique();
-            $table->String("Contrasena", 50);
+            $table->String("Correo")->unique();
+            $table->String("Usuario")->unique();
+            $table->String("Contrasena");
             $table->integer("Rol")->unsigned();
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ class CreaTablaEventos extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->increments('id');
-            $table->String("Nombre", 100)->unique();
+            $table->String("Nombre")->unique();
             $table->date("Fecha");
             $table->integer("Altos")->unsigned();
             $table->integer("Medios")->unsigned();
